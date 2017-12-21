@@ -2,7 +2,15 @@ import React, { Component } from 'react';
 
 class CatGif extends Component {
   render() {
-    return <p>here is a cat gif lololol</p>
+    return <iframe 
+              src={`https://giphy.com/embed/${this.props.id}`}
+              width="480"
+              height={this.props.height}
+              frameBorder="0"
+              className="giphy-embed"
+              allowFullScreen
+              title={this.props.id}
+            />
   }
 }
 
