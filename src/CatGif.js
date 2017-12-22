@@ -14,6 +14,7 @@ class CatGif extends Component {
           allowFullScreen
           title={this.props.id}
         />
+        <p>{this.props.caption}</p>
         <button onClick={this.props.removeGif}>Remove this GIF</button>
       </div>
     )
