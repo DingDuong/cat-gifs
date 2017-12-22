@@ -1,24 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class CatGif extends Component {
-
-  render() {
-    return (
-      <div>
-        <iframe 
-          src={`https://giphy.com/embed/${this.props.id}`}
-          width="480"
-          height={this.props.height}
-          frameBorder="0"
-          className="giphy-embed"
-          allowFullScreen
-          title={this.props.id}
-        />
-        <p>{this.props.caption}</p>
-        <button onClick={this.props.removeGif}>Remove this GIF</button>
-      </div>
-    )
-  }
-}
+const CatGif = props => (
+  <div>
+    <iframe
+      src={`https://giphy.com/embed/${props.id}`}
+      width="480"
+      height={props.height}
+      frameBorder="0"
+      className="giphy-embed"
+      allowFullScreen
+      title={props.id}
+    />
+    <p>{props.caption}</p>
+    <button onClick={props.removeGif}>Remove this GIF</button>
+  </div>
+);
 
 export default CatGif;
